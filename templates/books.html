@@ -1,0 +1,647 @@
+{% extends "base.html" %}
+
+<!-- this loads a custom file I created for the repeated use of some variables on my app -->
+{% load custom_tags %}
+
+{% block title %}Books{% endblock title %}
+
+{% block link %}
+
+<link rel="stylesheet" href="static/books.css">
+<!-- this is cdn link for ajax which I used in order to prevent the default behaviour of form submission -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+{% endblock link %}
+
+{% block main %}
+<div class="main-container my-3 px-5 w-100 h-100">
+
+        <!-- this section briefly indicates the purpose of books page -->
+    <section class="intro px-1 py-3 h-3- w-100 d-flex flex-column justify-content-center align-items-start">
+        <div class="heading-container">
+        <h1 class="heading" >ALL YOUR BOOKS AT ONE PLACE</h1>
+    </div>
+        <p class="text-white">All the recommended books related to your courses are presented on this page in a well-organized manner,
+            categorized according to their respective courses. You have the option to either read these books online or
+            download their PDF files for offline reading. The resources are thoughtfully curated to enhance your
+            learning experience, providing convenience and accessibility for both online and offline study sessions.
+            <br>
+            <strong>To download a book, enter your accurate UBIT seat number.</strong> <i>( <u>Download available for CS-306-23-MB Section B students only</u> )</i>
+        </p>
+    </section>
+
+    <!-- from here on, all the courses are displayed and the books recommended for them are available to be downloaded or read online -->
+
+    <!-- Course # 303: Mathematics-I (Calculus) -->
+    <section class="course">
+        <div class="course-name pink-heading">&#8226;&nbsp;<span>BSCS-303: Mathematics-I (Calculus)</span></div>
+        <div class="about-course">Mathematics-I (Calculus) introduces students to the fundamental concepts and techniques of calculus, covering topics such as limits, derivatives, integrals, and their applications in analyzing functions and solving real-world problems. Students will develop a deep understanding of mathematical concepts and problem-solving skills essential for further study in mathematics, engineering, and the sciences</div>
+        <div class="book-names">
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Calculus Early Transcendentals</span>&nbsp;<span>(10th Edition)</span>
+                    </p>
+                    <p class="author">
+                        Anton Bivens Davis
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-3031" aria-controls="offcanvasRight-3031">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-3031"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/12mJeTUUx46cpxgZ5BXP9cQLrUf_bIXX4/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-3031 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course # 405: Mathematics-III -->
+    <section class="course">
+        <div class="course-name pink-heading">&#8226;&nbsp;<span>{% get_variable 'cor3' %}</span></div>
+        <div class="about-course">{% get_variable 'a-cor3' %}</div>
+        <div class="book-names">
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Calculus With Analytic Geometry</span>&nbsp;<span>(Undergraduate Level)</span>
+                    </p>
+                    <p class="author">
+                        S. M. Yousuf & M. Amin
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-4051" aria-controls="offcanvasRight-4051">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-4051"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/10FyGj2pBvo0UjmUDZRaq0Oy29pGskm84/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-4051 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Mathematical Methods</span>&nbsp;<span>(Undergraduate Level)</span>
+                    </p>
+                    <p class="author">
+                        S. M. Yousuf, Abdul Majeed & M. Amin
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-4052" aria-controls="offcanvasRight-4052">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-4052"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/1T08xN4csc0RlmvXleIPNToFzSLVNN938/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-4052 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course # 408: Object Oriented Programming -->
+    <section class="course">
+        <div class="course-name pink-heading">&#8226;&nbsp;<span>{% get_variable 'cor6' %}</span></div>
+        <div class="about-course">
+            <p>{% get_variable 'a-cor6' %}</p>
+        </div>
+        <div class="book-names">
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Introduction to Java Programming</span>&nbsp;<span>(10th Edition)</span>
+                    </p>
+                    <p class="author">
+                        Y. Daniel Liang
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-4081" aria-controls="offcanvasRight-4081">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-4081"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/1nDG4JvJ9YAQxj2TJXCDwC_Gz_SemOv9l/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-4081 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course # 409: Materials, Semi-conductors & Devices -->
+    <section class="course">
+        <div class="course-name pink-heading">&#8226;&nbsp;<span>{% get_variable 'cor5' %}</span></div>
+        <div class="about-course">
+            <p>{% get_variable 'a-cor5' %}</p>
+        </div>
+        <div class="book-names">
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Electronic Devices</span>&nbsp;<span>(9th Edition)</span>
+                    </p>
+                    <p class="author">
+                        Thomas L. Floyd
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-4091" aria-controls="offcanvasRight-4091">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-4091"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/1MHVU4Ff-KtkV74P05yN5kdoZ5AfiEEYe/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-4091 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Electronic Principles</span>&nbsp;<span>(8th Edition)</span>
+                    </p>
+                    <p class="author">
+                        A. Malvino & David B.
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-4092" aria-controls="offcanvasRight-4092">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-4092"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/1uaQ9vPQPM6mHDEMVRZlT-JnQI6U5_8up/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-4092 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course # 412: Software Engineering & Project Management -->
+    <section class="course">
+        <div class="course-name pink-heading">&#8226;&nbsp;<span>BSCS-412: Software Engineering & Project Management</span></div>
+        <div class="about-course">
+            <p>Software Engineering and Project Management equips students with skills to lead successful software projects, emphasizing project planning, team collaboration, agile methodologies for effective project execution, tools for project tracking and management, strategies for managing stakeholder expectations, and approaches for addressing challenges in distributed and remote project teams.</p>
+        </div>
+        <div class="book-names">
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Software Engineering</span>&nbsp;<span>(7th Edition)</span>
+                    </p>
+                    <p class="author">
+                        Roger S. Pressman
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-4121" aria-controls="offcanvasRight-4121">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-4121"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/1sT8JQgKcJaXymNT6eLwGYDlDaue6aeZl/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-4121 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Software Engineering</span>&nbsp;<span>(10th Edition)</span>
+                    </p>
+                    <p class="author">
+                        Ian Sommerville
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-4122" aria-controls="offcanvasRight-4122">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-4122"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/1CfD3KvsPZHlZn8V5N8DctAEewjaJPdKv/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-4122 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course # 501: Theory of Computer Science -->
+    <section class="course">
+        <div class="course-name pink-heading">&#8226;&nbsp;<span>BSCS-501: Theory of Computer Science</span></div>
+        <div class="about-course">
+            <p>Theory of Computer Science delves into the theoretical underpinnings of computation, covering automata theory, formal languages, computability, complexity analysis, applications of theoretical concepts in solving practical computing problems, recent advances in quantum computing, and discussions on the philosophical implications of computational theory.</p>
+        </div>
+        <div class="book-names">
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Introduction to Computer Theory</span>&nbsp;<span></span>
+                    </p>
+                    <p class="author">
+                        Daniel I. A. Cohen
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-5011" aria-controls="offcanvasRight-5011">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-5011"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/1mrw0156gLaoHk2MLkFU4L2pyim1eGOtk/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-5011 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course # 502: Concepts of Operating Systems -->
+    <section class="course">
+        <div class="course-name pink-heading">&#8226;&nbsp;<span>BSCS-502: Concepts of Operating Systems</span></div>
+        <div class="about-course">
+            <p>Concepts of Operating Systems explores the foundational concepts of operating systems, including process management, memory management, file systems, concurrency control, and security mechanisms, with a focus on understanding the role of operating systems in modern computing environments.</p>
+        </div>
+        <div class="book-names">
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Operating Systems</span>&nbsp;<span>(7th Edition)</span>
+                    </p>
+                    <p class="author">
+                        William Stallings
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-5021" aria-controls="offcanvasRight-5021">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-5021"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/1oKbEw2y_2PpjCQtQTnvlUBB95BYkB_nK/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-5021 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course # 503: Data Communication and Networking-I -->
+    <section class="course">
+        <div class="course-name pink-heading">&#8226;&nbsp;<span>BSCS-503: Data Communication & Networking-I</span></div>
+        <div class="about-course">
+            <p>In Data Communication and Networking-I, students delve into the basics of data transmission across networks, exploring concepts such as the OSI model, networking protocols, device configurations, practical network troubleshooting, the fundamentals of network security, and the impact of emerging technologies on network infrastructure.</p>
+        </div>
+        <div class="book-names">
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Data Communication and Networking</span>&nbsp;<span>(4th Edition)</span>
+                    </p>
+                    <p class="author">
+                        Behrouz A. Forouzan
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-5031" aria-controls="offcanvasRight-5031">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-5031"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/1kodcGCdgTpRvmnASFJUSDrlAAdnLn5Ar/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-5031 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course # 509: Database Systems -->
+    <section class="course">
+        <div class="course-name pink-heading">&#8226;&nbsp;<span>BSCS-509: Database Systems</span></div>
+        <div class="about-course">
+            <p>Database Systems introduces students to the principles and practices of managing and manipulating data, covering relational database design, SQL querying, transaction management, data modeling, and database administration.</p>
+        </div>
+        <div class="book-names">
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Fundamentals of Databse Systems</span>&nbsp;<span>(6th Edition)</span>
+                    </p>
+                    <p class="author">
+                        Elmasri , Navathe
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-5091" aria-controls="offcanvasRight-5091">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-5091"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/1knjtXhw7YFFqAhaG8x8sn_IrL2G-W2aZ/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-5091 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course # 512: Data Communication and Networking-II -->
+    <section class="course">
+        <div class="course-name pink-heading">&#8226;&nbsp;<span>BSCS-512: Data Communication & Networking-II</span></div>
+        <div class="about-course">
+            <p>Building upon foundational knowledge, Data Communication and Networking-II delves into advanced topics including network optimization, security protocols, emerging technologies like IoT and 5G, real-world case studies in network design, hands-on experience with network simulation tools, and discussions on the ethical and social implications of network technologies.</p>
+        </div>
+        <div class="book-names">
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Data Communication and Networking</span>&nbsp;<span>(4th Edition)</span>
+                    </p>
+                    <p class="author">
+                        Behrouz A. Forouzan
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-5121" aria-controls="offcanvasRight-5121">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-5121"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/1kodcGCdgTpRvmnASFJUSDrlAAdnLn5Ar/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-5121 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course # 520: Advanced Software Engineering -->
+    <section class="course">
+        <div class="course-name pink-heading">&#8226;&nbsp;<span>BSCS-520: Advanced Software Engineering</span></div>
+        <div class="about-course">
+            <p>Advanced Software Engineering provides in-depth insights into methodologies for developing complex software systems, emphasizing architectural design, quality assurance techniques, agile methodologies, the integration of DevOps practices, strategies for software maintenance and evolution, and considerations for scalability and performance optimization.</p>
+        </div>
+        <div class="book-names">
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Software Engineering</span>&nbsp;<span>(7th Edition)</span>
+                    </p>
+                    <p class="author">
+                        Roger S. Pressman
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-5201" aria-controls="offcanvasRight-5201">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-5201"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/1sT8JQgKcJaXymNT6eLwGYDlDaue6aeZl/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-5201 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+            <div class="book-names-list">
+                <section class="bna">
+                    <p class="book">
+                        <span>Software Engineering</span>&nbsp;<span>(10th Edition)</span>
+                    </p>
+                    <p class="author">
+                        Ian Sommerville
+                    </p>
+                </section>
+                <section class="buttons">
+                    <div class="read-btn">
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight-5202" aria-controls="offcanvasRight-5202">Read Online</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-5202"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <iframe src="https://drive.google.com/file/d/1CfD3KvsPZHlZn8V5N8DctAEewjaJPdKv/preview"
+                                    width="100%" height="100%" allow="autoplay"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-btn">
+                        <button type="button" class="download-5202 btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop-1" onclick="forFileSelection(this)">Download Pdf</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- body of the second modal -->
+    <div class="modal fade" id="staticBackdrop-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header" data-bs-theme="dark">
+                    <h5 class="modal-title blue-modal-title" id="insertHead">
+                        Confirmation
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-white" id="insertBody">
+                    Are you sure you want to download this file?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="downloadButton" onclick="handleEvent()">Yes</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeSecondModal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--this script holds the functions for downloading, setting the selected book url and other functionalities-->
+<script src= "static/books.js"></script>
+
+{% endblock main %}

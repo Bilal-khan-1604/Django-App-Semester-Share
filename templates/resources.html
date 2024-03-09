@@ -1,0 +1,970 @@
+{% extends "base.html" %}
+{% load custom_tags %}
+
+{% block title %}Resources{% endblock title %}
+
+{% block link %}
+<link rel="stylesheet" href="static/tutorials.css">
+{% endblock link %}
+
+{% block main %}
+
+<!--this is the sidebar containing table of contents-->
+<section class="tutorialSidebar position-fixed top-0 left-0 d-flex align-items-center justify-content-center"
+  id="toggleSidebar">
+  <h4 class="pink-heading">Table of Contents</h4>
+  <div class="toggle-button" id="toggleButton"></div>
+</section>
+
+<!--this idv adds a backdrop  to the sidebar when it's open, and removes it when it's  closed -->
+<div class="backdrop"></div>
+
+<!--this sections holds the inner content of the sidebar-->
+<section class="sidebar-container" id="Sidebar">
+  <div class="sidebar-content w-100">
+    <div class="sidebar-header pink-heading d-flex w-100">
+      <h4>Table of Contents</h4>
+    </div>
+    <section class="sidebar-list w-100">
+      <div class="sidebarTogglers"><a href="#EducationalWebsites"
+          class="sidebar-inner-text text-decoration-none text-white">Educational Websites</a></div>
+      <div class="sidebarTogglers"><a href="#DigitalLibraries"
+          class="sidebar-inner-text text-decoration-none text-white">Digital Libraries</a></div>
+      <div class="sidebarTogglers"><a href="#OnlineCoursesPlatforms"
+          class="sidebar-inner-text text-decoration-none text-white">Online Courses Platforms</a></div>
+      <div class="sidebarTogglers"><a href="#Youtube" class="sidebar-inner-text text-decoration-none text-white">Youtube
+          Channels</a></div>
+      <div class="sidebarTogglers"><a href="#PracticeWebsites"
+          class="sidebar-inner-text text-decoration-none text-white">Practice Websites & Platforms</a></div>
+    </section>
+  </div>
+</section>
+
+<!-- this div briefly indicates the purpose of books page -->
+<div class="main-container px-3 px-sm-3 px-md-4 px-lg-5 my-2 my-sm-3 my-md-4 py-2 py-sm-3 py-md-4">
+  <section class="container-fluid my-2 my-sm-3 my-md-4">
+    <div class="static-heading-container">
+      <h1 class="static-heading">Tailored For You</h1>
+    </div>
+    <div class="static-main-text">
+      <p class="text-white">
+        Explore a world online that's made just for you. Find helpful websites, videos, forums, and apps that fit your
+        interests perfectly. Click around to discover new things you'll love. It's like having a map that guides you
+        through the internet, showing you all the best stuff for you.
+      </p>
+    </div>
+  </section>
+  <div id="EducationalWebsites"></div>
+</div>
+
+<!-- This is where the main body of the webpage starts. It contains all the resources related to the courses. -->
+<!--Resource # 1: Educational Websites-->
+<div class="educational-websites main-container px-3 px-sm-3 px-md-4 px-lg-5 my-2 my-sm-3 my-md-4 py-2 py-sm-3 py-md-4">
+  <section
+    class="educational-websites-inner container-fluid my-2 my-sm-3 my-md-4 d-flex flex-column justify-content-between align-items-start">
+    <div class="all-tutorials-heading">
+      <h1 class="all-tutorials-heading-text">Educational Websites</h1>
+    </div>
+    <div class="items-list">
+      <ol>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.w3schools.com/">W3Schools :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Master web development fundamentals with W3Schools. Access clear and concise tutorials covering HTML,
+              CSS, JavaScript, and more. Perfect for beginners and seasoned developers alike.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.khanacademy.org/">Khan Academy :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Unlock a world of learning with Khan Academy. Dive into subjects ranging from mathematics and science to
+              humanities and economics. Explore interactive exercises and instructional videos tailored to your learning
+              pace.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://ed.ted.com/">Ted-Ed :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Expand your mind with Ted-Ed. Delve into thought-provoking educational videos on a myriad of topics, from
+              history and literature to science and philosophy. Stimulate curiosity and deepen understanding with
+              engaging content.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.codecademy.com/">Code Academy :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Embark on a coding journey with Codecademy. Learn to code in various programming languages through
+              hands-on projects and interactive lessons. Build real-world skills and unleash your creativity in the
+              world of software development</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://ocw.mit.edu/">MIT OpenCourseWare :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Access world-class education with MIT OpenCourseWare. Explore a vast collection of courses covering
+              diverse disciplines, from computer science and engineering to humanities and social sciences. Dive deep
+              into academic subjects taught by renowned faculty at the Massachusetts Institute of Technology.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+  <div id="DigitalLibraries"></div>
+</div>
+
+<!--Resource # 2: Digital Libraries-->
+<div class="digital-libraries main-container px-3 px-sm-3 px-md-4 px-lg-5 my-2 my-sm-3 my-md-4 py-2 py-sm-3 py-md-4">
+  <section class="digital-libraries-inner container-fluid my-2 my-sm-3 my-md-4">
+    <div class="all-tutorials-heading">
+      <h1 class="all-tutorials-heading-text">Digital Libraries</h1>
+    </div>
+    <div class="items-list">
+      <ol>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.junkybooks.com/">Junky Books :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Dive into a treasure trove of literary gems at Junky Books, where you can explore a diverse collection of
+              digital books spanning various genres, from classic literature to contemporary fiction, enriching your
+              reading experience.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.gutenberg.org/">Project Gutenberg :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Project Gutenberg offers access to thousands of free eBooks, including timeless classics and obscure
+              works, providing literature from across the globe and across centuries, all available at your fingertips.
+            </p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://onlinelibrary.wiley.com/">Wiley Online Library :&nbsp;<svg
+                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Wiley Online Library provides access to cutting-edge research and scholarly publications, offering a vast
+              repository of academic journals, books, and reference works covering a wide range of disciplines, keeping
+              you informed with the latest advancements in science, technology, medicine, and more.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://archive.org/">Internet Archive :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Explore millions of free books, movies, music, and more at Internet Archive, delving into historical
+              archives, cultural artifacts, and multimedia resources spanning centuries of human creativity and
+              knowledge.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.free-ebooks.net/#gs.44pwa9">Free-Ebooks :&nbsp;<svg xmlns="http://www.w3.org/2000/svg"
+                x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>At Free-Ebooks, discover a diverse collection of free eBooks across various genres, including fiction,
+              non-fiction, self-help, and more, expanding your digital library without breaking the bank and enjoying
+              unlimited access to captivating reads.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.google.com/aclk?sa=l&ai=DChcSEwja8MuGvpmEAxWtQ0ECHYwlC60YABABGgJ3cw&ase=2&gclid=CjwKCAiA8YyuBhBSEiwA5R3-E--PZ_lZIPuro5HOUCUhoFiMqitzDVWUiYKZnxY4swVpeU1W3HWSERoC8AUQAvD_BwE&sig=AOD64_1lSRU7-kKhDmx0PrKiubk9rzZq4w&q&nis=4&adurl&ved=2ahUKEwiFoMWGvpmEAxXP1wIHHUQwDugQ0Qx6BAgGEAE">Zendy
+              Library :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
+                viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Zendy Library empowers your pursuit of knowledge and discovery with a wealth of academic resources and
+              research materials, providing access to scholarly articles, journals, and publications across various
+              disciplines.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+  <div id="OnlineCoursesPlatforms"></div>
+</div>
+
+<!--Resource # 3: Online Courses Platforms-->
+<div
+  class="online-courses-platforms main-container px-3 px-sm-3 px-md-4 px-lg-5 my-2 my-sm-3 my-md-4 py-2 py-sm-3 py-md-4">
+  <section class="online-courses-platforms-inner container-fluid my-2 my-sm-3 my-md-4">
+    <div class="all-tutorials-heading">
+      <h1 class="all-tutorials-heading-text">Online Courses Platforms</h1>
+    </div>
+    <div class="items-list">
+      <ol>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.coursera.org/">Coursera :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>At Coursera, access a wide range of online courses taught by top instructors from leading universities
+              and organizations worldwide, offering opportunities to advance your skills and knowledge in various
+              fields.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.udemy.com/">Udemy :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Udemy provides a platform for experts to share their knowledge through thousands of online courses
+              covering diverse topics, empowering learners to acquire new skills and pursue personal and professional
+              development at their own pace.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.khanacademy.org/">Khan Academy :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Khan Academy offers free online courses and instructional videos on subjects ranging from mathematics and
+              science to humanities and economics, providing accessible and engaging learning resources for students of
+              all ages.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.edx.org/">edX :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20"
+                height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>edX partners with universities and institutions to offer high-quality online courses and programs,
+              allowing learners to gain valuable knowledge and credentials in areas such as business, technology, and
+              the arts, enhancing their career prospects and intellectual growth.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.freecodecamp.org/">FreeCodeCamp :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>At FreeCodeCamp, access a wealth of free resources, including interactive coding challenges and online
+              courses, to learn programming languages and web development skills, empowering aspiring developers to
+              build real-world projects and launch rewarding careers in tech.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+  <div id="Youtube"></div>
+</div>
+
+<!--Resource # 4: Youtube Playlists-->
+<div class="youtube main-container px-3 px-sm-3 px-md-4 px-lg-5 my-2 my-sm-3 my-md-4 py-2 py-sm-3 py-md-4">
+  <section class="youtube-inner container-fluid my-2 my-sm-3 my-md-4">
+    <div class="all-tutorials-heading">
+      <h1 class="all-tutorials-heading-text" style=" color: hsl(195, 75%, 52%);">Youtube Channels</h1>
+    </div>
+    <div class="items-list">
+      <ol>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.youtube.com/@GoogleDevelopers/playlists">Google For Developers :&nbsp;<svg
+                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Google for Developers offers a wealth of resources for software developers, providing tutorials, tips,
+              and updates on Google's latest technologies and tools, empowering developers to create innovative
+              applications and solutions.</p>
+          </div>
+        </li>
+
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.youtube.com/@GateSmashers">Gate Smashers :&nbsp;<svg xmlns="http://www.w3.org/2000/svg"
+                x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Gate Smashers is a popular YouTube channel dedicated to helping students prepare for the Graduate
+              Aptitude Test in Engineering (GATE), offering comprehensive tutorials, solved problems, and exam
+              strategies to excel in this competitive examination and pursue higher education and career opportunities
+              in engineering.</p>
+          </div>
+        </li>
+
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.youtube.com/@codecademy">Code Academy :&nbsp;<svg xmlns="http://www.w3.org/2000/svg"
+                x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Codecademy's YouTube channel offers comprehensive programming tutorials and coding challenges, covering a
+              wide range of programming languages and topics. Perfect for beginners and experienced coders alike,
+              Codecademy provides in-depth lessons to help you master programming skills and advance your career in
+              tech.</p>
+          </div>
+        </li>
+
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.youtube.com/@ApnaCollegeOfficial">Apna College :&nbsp;<svg
+                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Apna College, founded by Shraddha Khapra with expertise gained from Microsoft, and Aman Dhattarwal,
+              offers a comprehensive range of educational content on its YouTube channel. With a focus on academic
+              excellence and career development, Apna College provides tutorials, exam preparation tips, and career
+              guidance to students. Whether it's mastering complex technical concepts or navigating the challenges of
+              competitive exams, Apna College empowers learners to achieve their academic and professional goals.</p>
+          </div>
+        </li>
+
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.youtube.com/@netninja">The Net Ninja :&nbsp;<svg xmlns="http://www.w3.org/2000/svg"
+                x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>The Net Ninja is a popular YouTube channel offering tutorials on web development, including HTML, CSS,
+              JavaScript, and more. With clear explanations and practical examples, The Net Ninja helps viewers build
+              strong foundations in web development and create dynamic, interactive websites and applications.</p>
+          </div>
+        </li>
+
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.youtube.com/@CodeWithHarry">Code With Harry :&nbsp;<svg
+                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>CodeWithHarry, created by Haris Ali Khan, an IIT graduate, is a popular YouTube channel known for its
+              in-depth programming language tutorials. With a meticulous approach and a focus on clarity, CodeWithHarry
+              covers programming languages from the basics to advanced concepts. Whether you're a novice looking to
+              learn the fundamentals of coding or an experienced developer aiming to enhance your skills, CodeWithHarry
+              offers detailed courses and practical examples to help you succeed in the world of programming.</p>
+          </div>
+        </li>
+
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.youtube.com/@TraversyMedia">Traversy Media :&nbsp;<svg
+                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Traversy Media provides high-quality tutorials and courses on web development, programming languages, and
+              software development tools. Led by Brad Traversy, an experienced developer and educator, this channel
+              offers practical advice, project-based learning, and industry insights to help you become a proficient
+              developer.</p>
+          </div>
+        </li>
+
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.youtube.com/c/programmingwithmosh">
+              Programming With Mosh :
+              &nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
+                viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Programming with Mosh offers clear and concise tutorials on programming languages, software development,
+              and computer science concepts. With Mosh Hamedani's expert guidance, viewers can deepen their
+              understanding of coding fundamentals, improve their problem-solving skills, and become confident
+              developers in today's competitive tech industry.</p>
+          </div>
+        </li>
+
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.youtube.com/@gajendrapurohit">Dr. Gajendra Purohit :&nbsp;<svg
+                xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Dr. Gajendra Purohit delivers clear explanations of complex mathematical concepts, including discrete
+              mathematics, calculus, statistics, linear algebra, and algorithms, providing invaluable insights and
+              clarity to students seeking a deeper understanding of these subjects.</p>
+          </div>
+        </li>
+
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.youtube.com/@academind">Academind :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Academind provides educational content on software development, web development, and technology trends.
+              With tutorials, courses, and industry insights, this channel equips learners with the knowledge and skills
+              needed to succeed in the ever-evolving field of programming and software engineering.</p>
+          </div>
+        </li>
+
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.youtube.com/@Bedimcode">Bedimcode :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Bedimcode offers comprehensive tutorials on website building, frontend components, and frontend
+              libraries, providing valuable insights and practical guidance for aspiring web developers</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+  <div id="PracticeWebsites"></div>
+</div>
+
+<!--Resource # 5: Practice Websites-->
+<div class="practice-websites main-container px-3 px-sm-3 px-md-4 px-lg-5 my-2 my-sm-3 my-md-4 py-2 py-sm-3 py-md-4">
+  <section class="practice-websites-inner container-fluid my-2 my-sm-3 my-md-4">
+    <div class="all-tutorials-heading">
+      <h1 class="all-tutorials-heading-text">Practice Websites & Platforms</h1>
+    </div>
+    <div class="items-list">
+      <ol>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.hackerrank.com/">Hacker Rank :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Hacker Rank offers a platform for developers to hone their coding skills through challenges,
+              competitions, and assessments across various domains, helping individuals prepare for technical
+              interviews and advance their programming proficiency.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://leetcode.com/">Leet Code :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Leet Code provides a vast array of coding challenges and problems designed to improve algorithmic
+              thinking and problem-solving skills, offering a platform for aspiring and seasoned developers to
+              practice coding and prepare for coding interviews.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.geeksforgeeks.org/">GeeksforGeeks :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>GeeksforGeeks serves as a comprehensive resource for computer science students and professionals,
+              offering tutorials, articles, coding practice, and interview preparation material covering a wide range
+              of topics, from algorithms and data structures to programming languages and system design.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://edabit.com/">Edabit :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Edabit offers a unique approach to coding practice through a collection of interactive challenges and
+              exercises, allowing users to improve their coding skills by solving real-world problems in various
+              programming languages.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.codewars.com/">Code Wars :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Code Wars provides a community-driven platform for honing coding skills through kata challenges, where
+              users solve progressively complex coding problems and improve their proficiency in programming languages
+              while engaging with fellow developers.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.codecademy.com/">Code Academy :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Code Academy offers interactive coding lessons and projects across various programming languages and
+              topics, providing beginners and experienced coders alike with a hands-on learning experience to master
+              programming skills and build real-world projects.</p>
+          </div>
+        </li>
+        <li class="tutorials-items text-white">
+          <div class="tutorials-item-heading d-flex align-items-center">
+            <a class="text-white d-flex align-items-center link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              target="_blank" data-toggle="popover" title="Visit Website" data-bs-placement="right"
+              href="https://www.frontendmentor.io/">Frontend Mentor :&nbsp;<svg xmlns="http://www.w3.org/2000/svg"
+                x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z">
+                    </path>
+                  </g>
+                </g>
+              </svg></a>
+          </div>
+          <div class="tutorials-item-text">
+            <p>Frontend Mentor is a platform designed for frontend developers to practice their skills by completing
+              realistic projects provided with designs and requirements, allowing users to build their portfolio and
+              enhance their frontend development capabilities.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+</div>
+
+<!--this script holds the animations for the sidebar-->
+<script src="static/resources.js"></script>
+
+{% endblock main %}

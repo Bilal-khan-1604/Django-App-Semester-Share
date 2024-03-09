@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% load custom_tags %}
+
+{% block title %}Courses > {% get_variable 'cor5' %} {% endblock title %}
+
+{% block link %}
+<!--remix icons-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+<!--swiper css-->
+<link rel="stylesheet" href="static/swiper-bundle.min.css">
+<!--custom stylesheet-->
+<link rel="stylesheet" href="static/coursenum.css">
+{% endblock link %}
+
+{% block main %}
+<div class="main-container px-3 px-sm-3 px-md-4 px-lg-5 my-2 my-sm-3 my-md-4 py-2 py-sm-3 py-md-4">
+    <section class="container-fluid my-2 my-sm-3 my-md-4">
+      <div class="static-heading-container">
+        <h1 class="static-heading" >{% get_variable 'cor5' %}</h1>
+      </div>
+      
+      <div class="course-teacher">
+          By {% get_variable 't-cor5' %}
+        </div>
+
+      <div class="about-course">
+        <p class="text-white">
+            {% get_variable 'a-cor5' %}
+        </p>
+      </div>
+    </section>
+    
+    <section class="cards-section container-fluid my-2 my-sm-3 my-md-4">
+      <div class="card text-center bg-dark">
+        <div class="card-body">
+          <h5 class="card-title">Course Outline</h5>
+          <p class="card-text">Find the comprehensive outline of our course curriculum as directed by the university.</p>
+          <a class="card__button" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">View Outline</a>
+        </div>
+        <div class="card-footer">
+          Last Updated: 07/03/24
+        </div>
+      </div>
+
+      <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"       aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header" data-bs-theme="dark">
+              <h5 class="modal-title blue-modal-title" id="staticBackdropLabel">Course Outline</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <article>
+                Materials : Crystalline and non-crystalline solids, Energy bands in solids, Types of materials, Metals, Semiconductors, Imperfections in solids..
+                <br><br>
+                Semiconductors : Extrinsic and Intrinsic semiconductors, Conductivities of semiconductors, Important semiconductors, Effect of temperature on semiconductors, Semiconductor growth, cutting, diffusion. Liquid Crystals.
+                <br><br>
+                Devices : PN junction, Semiconductor diode and Zener diode, Bipolar transistors, Junction Field Effect Transistor (JFET), Metal Oxide Semiconductor Field Effect Transistor (MOSFET). Solar Cells. Display Devices. Integrated Circuits (ICs).
+                <br><br>
+                <p class="pink-heading">Recommended Books :</p>
+                1. James F. Shackelford (1990). Introduction to Materials Science. Maxwell Macmillan International.
+                <br>
+                2. J. Wilson and J.F.B. Hawks (1989). Optoelectronics. Prentice Hall International.
+                <br>
+                3. James W. Mayer and S.S. Lau. (1990). Electronic Materials Science. Maxwell Macmillan International.
+              </article>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card text-center bg-dark">
+        <div class="card-body">
+          <h5 class="card-title">Course Documents</h5>
+          <p class="card-text">Centralized access to all the documents and resources provided by our course instructors.</p>
+          <a class="card__button" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">View Docs</a>
+        </div>
+        <div class="card-footer">
+          Last Updated: 07/03/24
+        </div>
+      </div>
+
+      <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"       aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header" data-bs-theme="dark">
+              <h5 class="modal-title blue-modal-title" id="staticBackdropLabel">Course Documents</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Will be updated as received.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+  </div>
+
+  <div class="main-container featured-playlists">
+        <h3 class="static-heading-featured-playlists pink-heading" style="25px">Featured Playlists</h3>
+  </div>
+
+  <section class="container slides-container">
+    <div class="card__container swiper">
+       <div class="card__content">
+          <div class="swiper-wrapper">
+            <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <iframe class="card__img" width="534" height="300" src="https://www.youtube.com/embed/videoseries?si=4_YZg5X7mRwve7Z6&amp;list=PLaKuhNGl3vKkI89EC1iubyVZwKfoUgSWx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Ease In Study</h3>
+                   <p class="card__description">
+                      Semiconductor Physics | Engineering Physics
+                   </p>
+ 
+                   <a href="https://youtube.com/playlist?list=PLaKuhNGl3vKkI89EC1iubyVZwKfoUgSWx&feature=shared" target="_blank" class="card__button">View Playlist</a>
+                </div>
+             </article>
+
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <iframe class="card__img" width="534" height="300" src="https://www.youtube.com/embed/videoseries?si=4f-Ev4iHxTi_ITXp&amp;list=PLQms29D1RqeKGBEW8La2a7YuN5_4pSV4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Jordan Edmunds</h3>
+                   <p class="card__description">
+                    Electronics I: Semiconductor Physics and Devices
+                   </p>
+ 
+                   <a href="https://youtube.com/playlist?list=PLQms29D1RqeKGBEW8La2a7YuN5_4pSV4k&feature=shared" target="_blank" class="card__button">View Playlist</a>
+                </div>
+             </article>
+ 
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <iframe class="card__img" width="534" height="300" src="https://www.youtube.com/embed/videoseries?si=-eKD8L9GuwKNbNpq&amp;list=PLBlnK6fEyqRiw-GZRqfnlVIBz9dxrqHJS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Neso Academy</h3>
+                   <p class="card__description">
+                    Analog Electronics
+                   </p>
+ 
+                   <a href="https://youtube.com/playlist?list=PLBlnK6fEyqRiw-GZRqfnlVIBz9dxrqHJS&feature=shared" target="_blank" class="card__button">View Playlist</a>
+                </div>
+             </article>
+ 
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <iframe class="card__img" width="534" height="300" src="https://www.youtube.com/embed/videoseries?si=-KXUaboyBf6BeqTI&amp;list=PLgMDNELGJ1CaNcuuQv9xN07ZWkXE-wCGP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">NPTEL</h3>
+                   <p class="card__description">
+                      Fundamentals of semiconductor devices
+                   </p>
+ 
+                   <a href="https://youtube.com/playlist?list=PLgMDNELGJ1CaNcuuQv9xN07ZWkXE-wCGP&feature=shared" target="_blank" class="card__button">View Playlist</a>
+                </div>
+             </article>
+          </div>
+       </div>
+
+       <!-- Navigation buttons -->
+       <div class="swiper-button-next">
+          <i class="ri-arrow-right-s-line"></i>
+       </div>
+       
+       <div class="swiper-button-prev">
+          <i class="ri-arrow-left-s-line"></i>
+       </div>
+
+    </div>
+ </section>
+
+ <script src="static/swiper-bundle.min.js"></script>
+ <script src="static/courses.js"></script>
+
+{% endblock main %}

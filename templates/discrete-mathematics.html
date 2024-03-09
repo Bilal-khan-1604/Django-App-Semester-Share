@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+{% load custom_tags %}
+
+{% block title %}Courses > {% get_variable 'cor4' %} {% endblock title %}
+
+{% block link %}
+<!--remix icons-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+<!--swiper css-->
+<link rel="stylesheet" href="static/swiper-bundle.min.css">
+<!--custom stylesheet-->
+<link rel="stylesheet" href="static/coursenum.css">
+{% endblock link %}
+
+{% block main %}
+<div class="main-container px-3 px-sm-3 px-md-4 px-lg-5 my-2 my-sm-3 my-md-4 py-2 py-sm-3 py-md-4">
+    <section class="container-fluid my-2 my-sm-3 my-md-4">
+      <div class="static-heading-container">
+        <h1 class="static-heading" >{% get_variable 'cor4' %}</h1>
+      </div>
+      
+      <div class="course-teacher">
+          By {% get_variable 't-cor4' %}
+        </div>
+
+      <div class="about-course">
+        <p class="text-white">
+            {% get_variable 'a-cor4' %}
+        </p>
+      </div>
+    </section>
+    
+    <section class="cards-section container-fluid my-2 my-sm-3 my-md-4">
+      <div class="card text-center bg-dark">
+        <div class="card-body">
+          <h5 class="card-title">Course Outline</h5>
+          <p class="card-text">Find the comprehensive outline of our course curriculum as directed by the university.</p>
+          <a class="card__button" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">View Outline</a>
+        </div>
+        <div class="card-footer">
+          Last Updated: 07/03/24
+        </div>
+      </div>
+
+      <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"       aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header" data-bs-theme="dark">
+              <h5 class="modal-title blue-modal-title" id="staticBackdropLabel">Course Outline</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <article>
+                Sets, Logic, : Propositions Logic, Predicate Logic, Mathematical Induction, Equivalence Relation and Partitions, Functions, Divisibility in the Integers & Congruences, The Binomial Theorem & Relation in Computer Science, Counting, Recurrence Relations, Matrices and Order Relations, Trees, Graphs. The Euchidean Algorithms, Fibonacci Numbers, Congruences and Equivalence Relations. Encryption Schemes.
+                <br><br>
+                <p class="pink-heading">Recommended Books :</p>
+                1. H.F. Mattson, Jr. (1993). Discrete Mathematics with Applications. John Wiley & Sons, Inc. New York.
+                <br>
+                2. Michael O. Albertson and J. Hutchinson (1988). Discrete Mathematics with Algorithms. John Wiley & Sons. Singapore.
+              </article>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card text-center bg-dark">
+        <div class="card-body">
+          <h5 class="card-title">Course Documents</h5>
+          <p class="card-text">Centralized access to all the documents and resources provided by our course instructors.</p>
+          <a class="card__button" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">View Docs</a>
+        </div>
+        <div class="card-footer">
+          Last Updated: 07/03/24
+        </div>
+      </div>
+
+      <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"       aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header" data-bs-theme="dark">
+              <h5 class="modal-title blue-modal-title" id="staticBackdropLabel">Course Documents</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Will be updated as received.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+  </div>
+
+  <div class="main-container featured-playlists">
+        <h3 class="static-heading-featured-playlists pink-heading" style="25px">Featured Playlists</h3>
+  </div>
+
+  <section class="container slides-container">
+    <div class="card__container swiper">
+       <div class="card__content">
+          <div class="swiper-wrapper">
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <iframe class="card__img" width="534" height="300" src="https://www.youtube.com/embed/videoseries?si=68U0Fpd-dSzvyoX1&amp;list=PLU6SqdYcYsfJ27O0dvuMwafS3X8CecqUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Dr. Gajendra Purohit</h3>
+                   <p class="card__description">
+                    Discrete Mathematics (Full Course)
+                   </p>
+ 
+                   <a href="https://youtube.com/playlist?list=PLU6SqdYcYsfJ27O0dvuMwafS3X8CecqUg&feature=shared" target="_blank" class="card__button">View Playlist</a>
+                </div>
+             </article>
+ 
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <iframe class="card__img" width="534" height="300" src="https://www.youtube.com/embed/videoseries?si=dSmkJ2KaysshSV5T&amp;list=PLxCzCOWd7aiH2wwES9vPWsEL6ipTaUSl3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Gate Smashers</h3>
+                   <p class="card__description">
+                      Discrete Mathematics
+                   </p>
+ 
+                   <a href="https://youtube.com/playlist?list=PLxCzCOWd7aiH2wwES9vPWsEL6ipTaUSl3&feature=shared" target="_blank" class="card__button">View Playlist</a>
+                </div>
+             </article>
+ 
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <iframe class="card__img" width="534" height="300" src="https://www.youtube.com/embed/videoseries?si=vfNfHsCpn72F8ZQ6&amp;list=PLC36xJgs4dxEYmhzVBW7nBdftFZ4xmiF1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Amit Khurana</h3>
+                   <p class="card__description">
+                      PDiscrete Mathematics for GATE — Complete Playlist
+                   </p>
+ 
+                   <a href="https://youtube.com/playlist?list=PLC36xJgs4dxEYmhzVBW7nBdftFZ4xmiF1&feature=shared" target="_blank" class="card__button">View Playlist</a>
+                </div>
+             </article>
+ 
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <iframe class="card__img" width="534" height="300" src="https://www.youtube.com/embed/videoseries?si=AWIgfjyzqSWDKHj2&amp;list=PLtCBuHKmdxOduWhQPbEwLN2ULKMqgQ44m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Fahad Hussain</h3>
+                   <p class="card__description">
+                    Discrete Structures | Discrete Mathematics Complete Course
+                   </p>
+ 
+                   <a href="#" class="card__button">View Playlist</a>
+                </div>
+             </article>
+
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <iframe class="card__img" width="534" height="300" src="https://www.youtube.com/embed/videoseries?si=PyUDl8JFX4DrPTyT&amp;list=PL9zFgBale5fvLZEn6ahrwDC2tRRipZQK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Well Academy</h3>
+                   <p class="card__description">
+                      Discrete Mathematics for Computer Science GATE
+                   </p>
+ 
+                   <a href="https://youtube.com/playlist?list=PL9zFgBale5fvLZEn6ahrwDC2tRRipZQK0&feature=shared" target="_blank" class="card__button">View Playlist</a>
+                </div>
+             </article>
+          </div>
+       </div>
+
+       <!-- Navigation buttons -->
+       <div class="swiper-button-next">
+          <i class="ri-arrow-right-s-line"></i>
+       </div>
+       
+       <div class="swiper-button-prev">
+          <i class="ri-arrow-left-s-line"></i>
+       </div>
+
+    </div>
+ </section>
+
+ <script src="static/swiper-bundle.min.js"></script>
+ <script src="static/courses.js"></script>
+
+{% endblock main %}

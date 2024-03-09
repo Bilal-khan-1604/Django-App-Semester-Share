@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+{% load custom_tags %}
+
+{% block title %}Courses > {% get_variable 'cor6' %} {% endblock title %}
+
+{% block link %}
+<!--remix icons-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+<!--swiper css-->
+<link rel="stylesheet" href="static/swiper-bundle.min.css">
+<!--custom stylesheet-->
+<link rel="stylesheet" href="static/coursenum.css">
+{% endblock link %}
+
+{% block main %}
+<div class="main-container px-3 px-sm-3 px-md-4 px-lg-5 my-2 my-sm-3 my-md-4 py-2 py-sm-3 py-md-4">
+    <section class="container-fluid my-2 my-sm-3 my-md-4">
+      <div class="static-heading-container">
+        <h1 class="static-heading" >{% get_variable 'cor6' %}</h1>
+      </div>
+      
+      <div class="course-teacher">
+        <a class="text-white d-flex align-items-center link-warning" href="https://www.mustakbil.com/people/profile/0dc6e3da3a6d4634b9e28eceeb84e001" target="_blank">
+          By {% get_variable 't-cor6' %}
+      </a>
+        </div>
+
+      <div class="about-course">
+        <p class="text-white">
+            {% get_variable 'a-cor6' %}
+        </p>
+      </div>
+    </section>
+    
+    <section class="cards-section container-fluid my-2 my-sm-3 my-md-4">
+      <div class="card text-center bg-dark">
+        <div class="card-body">
+          <h5 class="card-title">Course Outline</h5>
+          <p class="card-text">Find the comprehensive outline of our course curriculum as directed by the university.</p>
+          <a class="card__button" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">View Outline</a>
+        </div>
+        <div class="card-footer">
+          Last Updated: 07/03/24
+        </div>
+      </div>
+
+      <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"       aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header" data-bs-theme="dark">
+              <h5 class="modal-title blue-modal-title" id="staticBackdropLabel">Course Outline</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <article>
+                Introduction, What is Object-Oriented Programming? Object-Oriented Programming Applications, Stream I/O, Error Handling, Classes, Objects, Overloading, Constructors, Destructors, Derived Classes, Methods, Passing Objects, Sample Application.
+                <br><br>
+                <p class="pink-heading">Recommended Books :</p>
+                1. Parsons, David (1995) Object-Oriented Programming with C++. BPB Publications, New Delhi
+                <br>
+                2. Smith, Norman E. (1992). Object-Oriented Programming using Turbo C. BPB Publications, New Delhi.
+              </article>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card text-center bg-dark">
+        <div class="card-body">
+          <h5 class="card-title">Course Documents</h5>
+          <p class="card-text">Centralized access to all the documents and resources provided by our course instructors.</p>
+          <a class="card__button" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">View Docs</a>
+        </div>
+        <div class="card-footer">
+          Last Updated: 07/03/24
+        </div>
+      </div>
+
+      <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"       aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header" data-bs-theme="dark">
+              <h5 class="modal-title blue-modal-title" id="staticBackdropLabel">Course Documents</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ol>
+                <li><a class="text-white d-flex align-items-center link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://onedrive.live.com/view.aspx?resid=2F2AE83C9A84D550!133&authkey=!ABUI8CBDzbvMy8E" target="_blank">
+                  Java: Classes, Objects, Constructors
+                </a></li>
+                <li><a class="text-white d-flex align-items-center link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://onedrive.live.com/view.aspx?resid=2F2AE83C9A84D550!137&authkey=!ALUaTdH9UXe5Oxs" target="_blank">
+                  Java: Strings and Arrays
+                </a></li>
+                <li><a class="text-white d-flex align-items-center link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://onedrive.live.com/view.aspx?resid=2F2AE83C9A84D550!135&authkey=!AGXhZTTjYKeXT-o" target="_blank">
+                  Java: Flow Control
+                </a></li>
+                <li><a class="text-white d-flex align-items-center link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://onedrive.live.com/view.aspx?resid=2F2AE83C9A84D550!134&authkey=!AI6u21CXOp3Jf3s" target="_blank">
+                  Java: Methods
+                </a></li>
+                <li><a class="text-white d-flex align-items-center link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://onedrive.live.com/view.aspx?resid=2F2AE83C9A84D550!142&authkey=!AK930mRDyAw-5Ac" target="_blank">
+                  OOP - Java: Intro
+                </a></li>
+                <li><a class="text-white d-flex align-items-center link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://onedrive.live.com/view.aspx?resid=2F2AE83C9A84D550!143&authkey=!ACFURgnFGIbAJx0" target="_blank">
+                  OOP - Java: Variables, Datatypes, Operators
+                </a></li>
+                <li><a class="text-white d-flex align-items-center link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://onedrive.live.com/view.aspx?resid=2F2AE83C9A84D550!136&authkey=!AKU3X0jnmZAeKcc" target="_blank">
+                  OOP - Java: Classes, Objects, Constructors
+                </a></li>
+                <li><a class="text-white d-flex align-items-center link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://onedrive.live.com/view.aspx?resid=2F2AE83C9A84D550!140&authkey=!AIb-vw1Fo6sVd-0" target="_blank">
+                  OOP - Java: Abstraction
+                </a></li>
+                <li><a class="text-white d-flex align-items-center link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://onedrive.live.com/view.aspx?resid=2F2AE83C9A84D550!144&authkey=!AO85X3TbDDTaToU" target="_blank">
+                  OOP - Java: Encapsulation nd Access Modifiers
+                </a></li>
+                <li><a class="text-white d-flex align-items-center link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://onedrive.live.com/view.aspx?resid=2F2AE83C9A84D550!144&authkey=!AO85X3TbDDTaToU" target="_blank">
+                  OOP - Java: Association
+                </a></li>
+                <li><a class="text-white d-flex align-items-center link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://onedrive.live.com/view.aspx?resid=2F2AE83C9A84D550!141&authkey=!AJGs-_5jP1bOtsI" target="_blank">
+                  OOP - Java: Inheritance
+                </a></li>
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+  </div>
+
+  <div class="main-container featured-playlists">
+        <h3 class="static-heading-featured-playlists pink-heading" style="25px">Featured Playlists</h3>
+  </div>
+
+  <section class="container slides-container">
+    <div class="card__container swiper">
+       <div class="card__content">
+          <div class="swiper-wrapper">
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <iframe class="card__img" width="534" height="300" src="https://www.youtube.com/embed/videoseries?si=nVApKnuwrAtfHYW8&amp;list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Code With Harry</h3>
+                   <p class="card__description">
+                    Core + Advance Java tutorial for beginners
+                   </p>
+ 
+                   <a href="https://youtube.com/playlist?list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q&feature=shared" target="_blank" class="card__button">View Playlist</a>
+                </div>
+             </article>
+ 
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   <iframe class="card__img" width="534" height="300" src="https://www.youtube.com/embed/videoseries?si=kwPAlpWn_OS0hTWh&amp;list=PL8p2I9GklV466xs0qGUvLGAXy6xLyEcQy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Code Step By Step</h3>
+                   <p class="card__description">
+                    Step-by-step guide to java for beginners
+                   </p>
+ 
+                   <a href="https://youtube.com/playlist?list=PL8p2I9GklV466xs0qGUvLGAXy6xLyEcQy&feature=shared" target="_blank" class="card__button">View Playlist</a>
+                </div>
+             </article>
+ 
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   {% comment %} <img src="assets/img/avatar-3.png" alt="image" class="card__img"> {% endcomment %}
+                   <iframe class="card__img" width="534" height="300" src="https://www.youtube.com/embed/videoseries?si=cPKSgyC2ZVrAD3Jf&amp;list=PLmRclvVt5DtnqhXTJwd-oqVRwO3bLZCGV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Code It Up</h3>
+                   <p class="card__description">
+                    From Core concepts to Advance Java
+                   </p>
+ 
+                   <a href="https://youtube.com/playlist?list=PLmRclvVt5DtnqhXTJwd-oqVRwO3bLZCGV&feature=shared" target="_blank" class="card__button">View Playlist</a>
+                </div>
+             </article>
+ 
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   {% comment %} <img src="assets/img/avatar-4.png" alt="image" class="card__img"> {% endcomment %}
+                   <iframe class="card__img" width="534" height="300" src="https://www.youtube.com/embed/videoseries?si=It1f8IJ-VmLtVVFK&amp;list=PLqleLpAMfxGAdqZeY_4uVQOPCnAjhH-eT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Learn Coding</h3>
+                   <p class="card__description">
+                      Java programming and OOP concepts
+                   </p>
+ 
+                   <a href="https://youtube.com/playlist?list=PLqleLpAMfxGAdqZeY_4uVQOPCnAjhH-eT&feature=shared" target="_blank" class="card__button">View Playlist</a>
+                </div>
+             </article>
+
+             <article class="card__article swiper-slide">
+                <div class="card__image">
+                   {% comment %} <img src="assets/img/avatar-5.png" alt="image" class="card__img"> {% endcomment %}
+                   <iframe class="card__img" width="534" height="300" src="https://www.youtube.com/embed/videoseries?si=5mSVZKJ6pEY1UT4d&amp;list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                   <div class="card__shadow"></div>
+                </div>
+ 
+                <div class="card__data">
+                   <h3 class="card__name">Apna College</h3>
+                   <p class="card__description">
+                      Java & DSA course for placement
+                   </p>
+ 
+                   <a href="https://youtube.com/playlist?list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop&feature=shared" target="_blank" class="card__button">View Playlist</a>
+                </div>
+             </article>
+          </div>
+       </div>
+
+       <!-- Navigation buttons -->
+       <div class="swiper-button-next">
+          <i class="ri-arrow-right-s-line"></i>
+       </div>
+       
+       <div class="swiper-button-prev">
+          <i class="ri-arrow-left-s-line"></i>
+       </div>
+
+    </div>
+ </section>
+
+ <script src="static/swiper-bundle.min.js"></script>
+ <script src="static/courses.js"></script>
+
+{% endblock main %}

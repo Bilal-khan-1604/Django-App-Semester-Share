@@ -1,0 +1,197 @@
+.tutorialSidebar {
+    position: fixed;
+    width: 40px;
+    height: calc(100vh - 56px);
+    background-color: rgb(33, 37, 41);
+    border-right: 1px solid white;
+    margin-top: 56px;
+    z-index: 5;
+    animation: boxshadow 3s linear infinite;
+    cursor: pointer;
+}
+
+.tutorialSidebar h4{
+    position: absolute;
+    top: 48%;
+    display: flex;
+    white-space: nowrap;
+    z-index: 6;
+    transform: rotate(-90deg);
+}
+.toggle-button {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    left: 26px;
+    background-color: rgb(33, 37, 41);
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 2;
+    animation: popper 3s linear infinite;
+}
+
+@keyframes popper {
+    0% {
+        border-top: 1px solid white;
+        border-right: 1px solid white;
+    }
+    100% {
+        border-top: 3px solid white;
+        border-right: 3px solid white;
+    }
+}
+
+@keyframes boxshadow {
+    0% {
+        border-right: 1px solid white;
+    }
+    100% {
+        border-right: 3px solid white;
+    }
+}
+
+.animateSidebarToggler {
+    transform: translateX(-60px);
+    transition: transform .2s linear;
+}
+
+.animateSidebarTogglerReverse {
+    transform: translateX(0);
+    transition: transform .2s linear;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 2; /* Ensure it appears above other content */
+    display: none; /* Initially hidden */
+}
+
+.main-container {
+    width:  calc(100% - 40px);
+    margin-left: 40px;
+}
+
+.static-heading {
+    overflow: hidden;
+    justify-content: left;
+    color: #e0ac1c;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    font-size: 11vw;
+}
+
+@media (min-width: 500px) {
+    .static-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 650px) {
+    .static-heading {
+        font-size: 60px;
+    }
+}
+
+@media (min-width: 767px) {
+    .static-heading {
+        font-size: 75px;
+    }
+}
+.all-tutorials-heading {
+    margin-bottom: 30px;
+}
+
+.all-tutorials-heading-text {
+    font-family: 'Outfit', sans-serif;
+    text-decoration: 1px underline hsl(195, 75%, 52%);
+    text-underline-offset: 5px;
+    color: hsl(195, 75%, 52%);
+}
+
+.tutorials-items {
+    font-size: 22px;
+}
+
+.tutorials-item-text{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.tutorials-items a {
+    font-weight: 600;
+}
+
+.tutorials-item-heading {
+    width: fit-content;
+}
+
+
+.tutorials-items p {
+    font-size: 16px;
+}
+
+@media (max-width: 650px) {
+    .all-tutorials-heading-text {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 450px) {
+    .all-tutorials-heading-text {
+        font-size: 28px;
+    }
+}
+
+.sidebar-container {
+    display: flex;
+    position: fixed;
+    top: 56px;
+    left: -400px;
+    margin-left: 40px;
+    width: 330px;
+    height: calc(100vh - 56px);
+    background-color: rgb(33, 37, 41);
+    z-index: 3;
+    transition: left 0.3s ease;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.sidebar-header {
+    width: 100%;
+    padding: 0 10%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.sidebar-list div {
+    width: 100%;
+    padding: 3% 11%;
+    margin: 10% 0;
+    border-bottom: 0.2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 2rem;
+    font-size: 17px;
+}
+
+@media (max-width: 450px) {
+    .sidebar-container {
+        width: calc(100% - 40px);
+    }
+}
+
+.animateSidebarContent {
+    left: 0;
+}
