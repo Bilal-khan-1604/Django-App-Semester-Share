@@ -72,4 +72,4 @@ function handleEvent() {
     downloadFile();
 };
 
-downloadButton.addEventListener('click', handleEvent());
+downloadButton.addEventListener('click', handleEvent);
