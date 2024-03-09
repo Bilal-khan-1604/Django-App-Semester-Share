@@ -697,6 +697,27 @@
         }
         console.log(url);
     }
+
+    // this function downloads a file when called
+    function downloadFile() {
+
+        var downloadLink = document.createElement('a');
+        downloadLink.href = url;
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+
+    }
+
+    let downloadButton = document.getElementById("downloadButton");
+
+    // this function opens the first modal if retry is clicked in the second modal upon a failed download.
+    function handleEvent() {
+        document.getElementById("closeSecondModal").click();
+        downloadFile();
+    };
+
+    downloadButton.addEventListener('click', handleEvent);
 </script>
 
 {% endblock main %}
