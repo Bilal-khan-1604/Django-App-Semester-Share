@@ -71,3 +71,5 @@ function handleEvent() {
     document.getElementById("closeSecondModal").click();
     downloadFile();
 };
+
+downloadButton.addEventListener('click', handleEvent());
